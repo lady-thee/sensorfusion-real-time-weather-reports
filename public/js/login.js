@@ -30,11 +30,11 @@ const login = async () =>{
         let responseData;
 
         if (response.status === 401) {
-            window.location.href = '../error/http401.html';
+            window.location.href = 'error/http401.html';
         } else if (response.status === 500) {
-            window.location.href = '../error/http500.html';
+            window.location.href = 'error/http500.html';
         } else if (response.status === 404) {
-            window.location.href = '../error/http404.html';
+            window.location.href = 'error/http404.html';
         } else if(!response.ok){
             errorData = await response.json();
 
@@ -58,12 +58,12 @@ const login = async () =>{
                     console.log(responseData.token);
                     localStorage.setItem('token', responseData.token);
                     successContainer.innerHTML = responseData.message;
-                    redirect('../public/dashboard.html');
+                    redirect('dashboard.html');
                 }
                 
             }else if(responseData){
                 successContainer.innerHTML = responseData;
-                redirect('../public/dashboard.html');
+                redirect('dashboard.html');
             }   
             
         }
