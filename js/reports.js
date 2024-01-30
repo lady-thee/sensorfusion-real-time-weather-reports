@@ -76,8 +76,7 @@ socket.onopen = function open(e){
 // };
 
 socket.onerror = function(event) {
-    let error = 'problem dey'
-    console.log(error);
+    console.error(event.error);
 }
 
 
