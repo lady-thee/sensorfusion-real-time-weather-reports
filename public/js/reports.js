@@ -7,7 +7,7 @@ const sensorCardModal = document.getElementById('sensorBodyCard');
 const sensorHeader = document.getElementById('sensorCardHeader')
 
 const socket = new WebSocket('wss://sensorfusionbackend.onrender.com/wss/data/')
-// const socket = new WebSocket('ws/' + window.location.host + window.location.pathname + '/')
+
 
 socket.onopen = function open(e){
     console.log(true);
@@ -76,7 +76,7 @@ socket.onopen = function open(e){
 // };
 
 socket.onerror = function(event) {
-    console.error(event.error);
+    console.error(event);
 }
 
 
