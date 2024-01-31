@@ -10,7 +10,7 @@ const socket = new WebSocket('wss://sensorfusionbackend.onrender.com/ws/data/')
 // const socket = new WebSocket('ws/' + window.location.host + window.location.pathname + '/')
 
 socket.onopen = function open(e){
-    // console.log(true);
+    console.log(true);
     setInterval(() => {
         socket.send(JSON.stringify({action: 'request.data'}))
     }, 3);
