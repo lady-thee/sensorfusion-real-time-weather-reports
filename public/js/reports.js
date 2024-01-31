@@ -6,7 +6,7 @@ const sensorCardModal = document.getElementById('sensorBodyCard');
 // const sensorCard = document.getElementById('sensorCard');
 const sensorHeader = document.getElementById('sensorCardHeader')
 
-const socket = new WebSocket('wss://sensorfusionbackend.onrender.com/ws/data/')
+const socket = new WebSocket('wss://sensorfusionbackend.onrender.com/wss/data/')
 // const socket = new WebSocket('ws/' + window.location.host + window.location.pathname + '/')
 
 socket.onopen = function open(e){
