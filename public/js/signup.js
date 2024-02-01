@@ -98,7 +98,7 @@ const submitForm = async () => {
 
 function redirect(params) {
     setTimeout(() => {
-        window.location.href = '../public/login.html'
+        window.location.href = 'login.html'
     }, 2000);
 }
 
